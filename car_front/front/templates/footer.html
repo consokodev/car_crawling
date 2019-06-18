@@ -1,0 +1,138 @@
+{% load static %}
+    <!-- Essential javascripts for application to work-->
+    <script type="text/javascript">
+        function genTable(data) {
+            $('#dataTable').DataTable({
+                "order": [[ 3, "desc"]],
+                dom: '<"dt-buttons"Bf><"clear">lirtp',
+                buttons: [
+                    'csv', 'excel', 'pdf'
+                ],
+                lengthMenu: [[10,25,50,100,-1], [10,25,50,100,"All"]],
+                data: data.response_data,
+                destroy: true,
+                columns: [
+                    {"data": "subject",
+                        "render": function(data,type,row,meta){
+                            if(type==='display') {
+                                data = '<a href="' + row['org_link'] + '" target="_blank">' + data + '</a>';
+                            }
+                            return data;
+                        }
+                    },
+                    {"data": "address"},
+                    {"data": "price"},
+                    {"data": "publish_time"},
+                    {"data": "images",
+                        "render": function(data,type,row,meta){
+                                if(type==='display') {
+                                    data = '<img src="' + JSON.parse(row['images'])[0] + '">';
+                                }
+                            return data;
+                        },
+                    },
+                ],
+                columnDefs:[
+                    {   targets:3,
+                        render:function(data){
+                        return moment(data).format('YYYY-MM-DD');
+                    }},
+                ]
+            });
+        }
+
+        $.ajax({
+            url: "{% url 'listcar' %}",
+            success: function (data) {
+                genTable(data);
+            },
+        });
+
+        $("#frmreport").submit(function(e) {
+            e.preventDefault();
+            var form = $(this);
+            $.ajax({
+                type: "POST",
+                url: {% url "listcar" %},
+                data: form.serialize(),
+                success: function(data) {
+                    genTable(data);
+                },
+                error: function(error) {
+                    alert(error);
+                }
+                });
+        });
+        function reportsearch() {
+            $('#frmreport').submit();
+        }
+        {#function frmupdate() {#}
+        {#    $('#frmupdate').click(function () {#}
+        {#            $.ajax({#}
+        {#                type: "POST",#}
+        {#                url: {% url "updatecar" %},#}
+        {#                data: { "Update": "Update",#}
+        {#                        'csrfmiddlewaretoken': '{{ csrf_token }}',#}
+        {#                },#}
+        {#            });#}
+        {#        });#}
+        {#}#}
+
+        $(document).ready(function () {
+                $('#frmupdate').click(function () {
+                    $.ajax({
+                        type: "POST",
+                        url: {% url "updatecar" %},
+                        data: { "Update": "Update",
+                                'csrfmiddlewaretoken': '{{ csrf_token }}',
+                        },
+                        success: function (data) {
+                            alert(data.response_message);
+                            $.ajax({
+                                url: "{% url 'listcar' %}",
+                                success: function (data) {
+                                    genTable(data);
+                                },
+                            });
+                        }
+                    });
+                });
+            });
+
+        $('#fromDate').datepicker({
+      	    format: "dd-mm-yyyy",
+      	    autoclose: true,
+      	    todayHighlight: true
+        });
+
+        $('#toDate').datepicker({
+      	    format: "dd-mm-yyyy",
+      	    autoclose: true,
+      	    todayHighlight: true
+        });
+      
+        $('#demoSelect').select2();
+        {#function reportexport()#}
+        {#{#}
+        {#    var serverID = document.getElementById("idServer").value;#}
+        {#    var fromDate = document.getElementById("fromDate").value;#}
+        {#    var toDate = document.getElementById("toDate").value;#}
+        {#    var DOMAIN = "https://po-ptm.mto.zing.vn/";#}
+        {#    window.location.href= DOMAIN + "main/exportreport?idServer="+serverID+"&fromDate=" + fromDate + "&toDate=" + toDate;#}
+        {#}#}
+
+    </script>
+
+    
+{#    <script type="text/javascript" src="{% static "js/plugins/chart.js" %}"></script>#}
+{#    <script type="text/javascript">#}
+{#      	var ctxp = $("#pieChartHome").get(0).getContext("2d");#}
+{#		var pieChart = new Chart(ctxp).Pie(pdataHome);#}
+{#		#}
+{#		var ctxl = $("#lineChartHome").get(0).getContext("2d");#}
+{#		var lineChart = new Chart(ctxl).Line(data);#}
+{#	  #}
+{#		var ctxl = $("#lineChartRev").get(0).getContext("2d");#}
+{#		var lineChart = new Chart(ctxl).Line(dataRev);#}
+{#    </script>#}
+    

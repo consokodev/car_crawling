@@ -1,0 +1,23 @@
+<!-- Sidebar menu-->
+{% load static %}
+<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+      <div class="app-sidebar__user">
+		<img class="app-sidebar__user-avatar" height="40" src="{% static "img/logo.png" %}" alt="User Image">
+        <div>
+          <p class="app-sidebar__user-name"> {{ user.username }} </p>
+          <p class="app-sidebar__user-designation"></p>
+        </div>
+      </div>
+      <ul class="app-menu">
+        <li class="treeview is-expanded"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Operation</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a class="treeview-item" href="/"><i class="icon fa fa-circle-o"></i>Home</a></li>
+{#			<li><a class="treeview-item <?php if($active=='reportnew') echo "active";?>" href="<?php echo $this->config->item('base_url');?>main/reportnew"><i class="icon fa fa-circle-o"></i>Report ( New /Old )</a></li>#}
+{#			<li><a class="treeview-item <?php if($active=='reportlevel') echo "active";?>" href="<?php echo $this->config->item('base_url');?>main/reportlevel"><i class="icon fa fa-circle-o"></i>Report Level</a></li>#}
+{#			<li><a class="treeview-item <?php if($active=='payment') echo "active";?>" href="<?php echo $this->config->item('base_url');?>main/payment"><i class="icon fa fa-circle-o"></i>Payment</a></li>#}
+{#			<li><a class="treeview-item <?php if($active=='usertop') echo "active";?>" href="<?php echo $this->config->item('base_url');?>main/usertop"><i class="icon fa fa-circle-o"></i>Top-Users</a></li>#}
+          </ul>
+        </li>
+      </ul>
+    </aside>
