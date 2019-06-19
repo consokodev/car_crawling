@@ -106,11 +106,11 @@ WSGI_APPLICATION = 'car_front.wsgi.application'
 DATABASES = {
     'default': {
             'ENGINE': 'djongo',
-            'NAME': 'CarCrawling_1',
-            'HOST': '127.0.0.1',
-            'PORT': 27017,
-            'USER': 'root',
-            'PASSWORD': 'example',
+            'NAME': os.getenv('DB_NAME'),
+            'HOST': os.getenv('DB_HOST'),
+            'PORT': int(os.getenv('DB_PORT')),
+            'USER': os.getenv('DB_USER'),
+            'PASSWORD': os.getenv('DB_PASS'),
             'ENFORCE_SCHEMA': False,
     }
 }

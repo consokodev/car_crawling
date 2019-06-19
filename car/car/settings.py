@@ -9,6 +9,8 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+import os
+
 BOT_NAME = 'car'
 
 SPIDER_MODULES = ['car.spiders']
@@ -90,10 +92,10 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-MONGO_URI = '127.0.0.1:27017'
-MONGO_DATABASE = 'CarCrawling_1'
-MONGO_USER = 'root'
-MONGO_PASS = 'example'
+MONGO_URI = os.getenv('DB_HOST') + ":" + os.getenv('DB_PORT')
+MONGO_DATABASE = os.getenv('DB_NAME')
+MONGO_USER = os.getenv('DB_USER')
+MONGO_PASS = os.getenv('DB_PASS')
 
 
 ###Mapping carbrand on chotot with bonbanh

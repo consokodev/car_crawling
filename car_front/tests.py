@@ -1,6 +1,12 @@
 import os
 
 print('##############')
-BASE_DIR = (os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-print(os.path.split(BASE_DIR)[0])
+
 print('##############')
+
+print(os.getenv('SCRIPT_PATH1', "abc"))
+print(os.environ['SCRIPT_PATH'])
+
+
+abc=123
+print(int(abc))
