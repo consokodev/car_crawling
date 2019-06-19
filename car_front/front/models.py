@@ -23,14 +23,14 @@ class carItem(models.Model):
     def __str__(self):
         return self.org_link
 
-# class User(AbstractUser):
-#     permission = JSONField(blank=True, null=True)
-#
-#     class Meta:
-#         app_label = "front"
-#
-#     def __str__(self):
-#         return self.username
-#
-#     def checkAdmin(self):
-#         return True if self.permission["admin"] else False
+class User(AbstractUser):
+    permission = JSONField(blank=True, null=True)
+
+    class Meta:
+        app_label = "front"
+
+    def __str__(self):
+        return self.username
+
+    def checkAdmin(self):
+        return True if self.permission["admin"] else False

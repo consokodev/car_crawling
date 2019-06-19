@@ -28,14 +28,14 @@ class ListCar(ListView):
     context_object_name = 'caritem_list'
     ordering = '-publish_time'
 
-    def get(self, request, *args, **kwargs):
-        if(request.user.is_authenticated):
-            if(request.user.checkAdmin()):
-                return super().get(request, *args, **kwargs)
-            else:
-                return render_to_response("invalid.html")
-        else:
-            return render_to_response("login.html")
+    # def get(self, request, *args, **kwargs):
+    #     if(request.user.is_authenticated):
+    #         if(request.user.checkAdmin()):
+    #             return super().get(request, *args, **kwargs)
+    #         else:
+    #             return render_to_response("invalid.html")
+    #     else:
+    #         return render_to_response("login.html")
 
     '''
         Add car_brand to user's response

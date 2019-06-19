@@ -159,7 +159,8 @@ STATIC_URL = '/static/'
 
 
 #####Scrapy project path
-SCRIPT_PATH = '/data/Project/python/crawling/car'
+# SCRIPT_PATH = '/data/Project/python/crawling/car'
+SCRIPT_PATH = os.path.split(BASE_DIR)[0] + "/car"
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
