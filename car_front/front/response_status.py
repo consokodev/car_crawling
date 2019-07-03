@@ -3,7 +3,6 @@
 from collections import namedtuple
 
 ErrorCodeProperties = namedtuple("ErrorCodeProperties", ["code", "message"])
-
 SUCCESS = ErrorCodeProperties(0, "Thành Công")
 FAIL = ErrorCodeProperties(-1, "Thất Bại")
 

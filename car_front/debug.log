@@ -1,0 +1,1231 @@
+2019-06-29 05:29:02,060 query DEBUG params: ()
+2019-06-29 05:29:02,063 query DEBUG 
+ sql_command: SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"
+2019-06-29 05:29:02,076 query DEBUG Find query: {'projection': ['app', 'name']}
+2019-06-29 05:29:10,464 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 29, 10, 399382), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:29:10,465 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:29:10,498 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 29, 10, 395767), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:29:10,499 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:29:10,628 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 29, 10, 395767)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:29:10,648 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 29, 10, 395767)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:29:11,430 query DEBUG params: (1,)
+2019-06-29 05:29:11,438 query DEBUG params: (1,)
+2019-06-29 05:29:11,440 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:29:11,442 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:29:11,651 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:29:11,688 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:29:11,855 query DEBUG params: ()
+2019-06-29 05:29:11,856 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:29:11,874 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:29:17,995 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 29, 17, 980672), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:29:17,996 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:29:18,111 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 29, 17, 980672)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:29:18,195 query DEBUG params: (1,)
+2019-06-29 05:29:18,196 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:29:18,303 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:29:18,319 query DEBUG params: ()
+2019-06-29 05:29:18,320 query DEBUG 
+ sql_command: SELECT "front_caritem"."org_link", "front_caritem"."desc", "front_caritem"."subject", "front_caritem"."region_name", "front_caritem"."price", "front_caritem"."images", "front_caritem"."phone_number", "front_caritem"."address", "front_caritem"."publish_time", "front_caritem"."km", "front_caritem"."car_type", "front_caritem"."engine_type", "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:29:18,383 query DEBUG Find query: {'projection': ['org_link', 'desc', 'subject', 'region_name', 'price', 'images', 'phone_number', 'address', 'publish_time', 'km', 'car_type', 'engine_type', 'car_brand']}
+2019-06-29 05:29:18,902 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 29, 18, 856021), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:29:18,908 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:29:19,060 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 29, 18, 856021)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:29:19,219 query DEBUG params: (1,)
+2019-06-29 05:29:19,225 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:29:19,350 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:29:19,387 query DEBUG params: ()
+2019-06-29 05:29:19,387 query DEBUG 
+ sql_command: SELECT "front_caritem"."org_link", "front_caritem"."desc", "front_caritem"."subject", "front_caritem"."region_name", "front_caritem"."price", "front_caritem"."images", "front_caritem"."phone_number", "front_caritem"."address", "front_caritem"."publish_time", "front_caritem"."km", "front_caritem"."car_type", "front_caritem"."engine_type", "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:29:19,511 query DEBUG Find query: {'projection': ['org_link', 'desc', 'subject', 'region_name', 'price', 'images', 'phone_number', 'address', 'publish_time', 'km', 'car_type', 'engine_type', 'car_brand']}
+2019-06-29 05:29:30,664 log WARNING Not Found: /undefined
+2019-06-29 05:31:56,161 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 31, 56, 143261), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:31:56,165 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:31:56,248 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 31, 56, 143261)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:31:56,253 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 31, 56, 214587), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:31:56,253 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:31:56,327 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 31, 56, 214587)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:31:56,380 query DEBUG params: (1,)
+2019-06-29 05:31:56,381 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:31:56,468 query DEBUG params: (1,)
+2019-06-29 05:31:56,468 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:31:56,500 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:31:56,583 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:31:56,631 query DEBUG params: ()
+2019-06-29 05:31:56,633 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:31:56,655 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:32:04,231 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 32, 4, 211862), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:32:04,232 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:32:04,283 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 32, 4, 211862)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:32:04,353 query DEBUG params: (1,)
+2019-06-29 05:32:04,354 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:32:04,455 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:32:04,467 query DEBUG params: ()
+2019-06-29 05:32:04,468 query DEBUG 
+ sql_command: SELECT "front_caritem"."org_link", "front_caritem"."desc", "front_caritem"."subject", "front_caritem"."region_name", "front_caritem"."price", "front_caritem"."images", "front_caritem"."phone_number", "front_caritem"."address", "front_caritem"."publish_time", "front_caritem"."km", "front_caritem"."car_type", "front_caritem"."engine_type", "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:32:04,524 query DEBUG Find query: {'projection': ['org_link', 'desc', 'subject', 'region_name', 'price', 'images', 'phone_number', 'address', 'publish_time', 'km', 'car_type', 'engine_type', 'car_brand']}
+2019-06-29 05:32:10,065 log WARNING Not Found: /undefined
+2019-06-29 05:32:13,026 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 32, 13, 15357), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:32:13,027 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:32:13,065 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 32, 13, 15357)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:32:13,117 query DEBUG params: (1,)
+2019-06-29 05:32:13,118 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:32:13,182 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:32:13,226 query DEBUG params: ()
+2019-06-29 05:32:13,227 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:32:13,245 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:32:13,413 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:32:13,443 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:32:13,454 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:32:13,460 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:32:13,468 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:32:13,488 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:32:13,510 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:32:13,530 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:32:13,549 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:32:13,560 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:32:13,579 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:32:13,630 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:32:13,640 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:32:13,653 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:32:13,657 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:32:13,676 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:32:13,700 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:32:13,706 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:32:13,717 log WARNING Not Found: /static/lte/plugins/jQuery/jquery-2.2.3.min.js
+2019-06-29 05:32:13,724 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:32:13,727 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:32:13,732 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:32:13,753 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:32:13,776 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:32:13,782 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:32:13,799 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:32:13,811 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:32:13,821 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:32:13,832 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:32:13,834 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:32:13,858 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:32:13,889 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:32:13,914 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:32:13,917 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:32:13,921 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:32:13,936 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:32:13,941 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:32:13,952 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:32:13,975 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:32:13,995 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:32:14,006 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:32:14,015 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:32:14,034 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:32:14,037 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:32:14,050 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:32:14,055 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:32:14,074 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:32:14,079 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:32:14,104 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:32:14,118 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:32:14,130 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:32:14,162 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:32:14,165 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:32:14,222 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:32:14,287 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:32:14,346 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:32:14,408 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:32:14,475 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:32:14,541 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:32:14,605 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:32:14,670 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:32:14,733 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:32:14,795 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:32:14,864 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:32:15,107 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:32:15,130 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:32:15,189 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:32:15,252 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:32:15,317 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:32:15,385 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:32:15,444 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:32:15,503 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:32:15,567 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:32:15,626 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:32:15,687 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:32:15,749 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:32:15,814 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:32:15,876 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:32:15,936 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:32:16,000 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:32:16,059 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:32:16,120 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:32:16,179 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:32:16,236 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:32:16,297 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:32:16,423 log WARNING Not Found: /favicon.ico
+2019-06-29 05:32:27,275 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 32, 27, 262448), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:32:27,276 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:32:27,333 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 32, 27, 262448)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:32:27,401 query DEBUG params: (1,)
+2019-06-29 05:32:27,402 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:32:27,477 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:32:27,519 query DEBUG params: ()
+2019-06-29 05:32:27,520 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:32:27,535 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:32:27,661 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:32:27,704 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:32:27,706 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:32:27,674 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:32:27,724 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:32:27,725 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:32:27,758 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:32:27,774 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:32:27,789 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:32:27,803 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:32:27,804 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:32:27,819 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:32:27,848 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:32:27,852 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:32:27,861 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:32:27,873 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:32:27,888 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:32:27,918 log WARNING Not Found: /static/lte/plugins/jQuery/jquery-2.2.3.min.js
+2019-06-29 05:32:27,902 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:32:27,932 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:32:27,945 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:32:27,957 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:32:27,974 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:32:27,992 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:32:28,002 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:32:28,017 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:32:28,027 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:32:28,052 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:32:28,066 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:32:28,103 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:32:28,113 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:32:28,118 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:32:28,137 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:32:28,140 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:32:28,144 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:32:28,173 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:32:28,181 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:32:28,236 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:32:28,239 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:32:28,243 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:32:28,254 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:32:28,258 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:32:28,278 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:32:28,299 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:32:28,318 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:32:28,332 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:32:28,341 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:32:28,344 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:32:28,366 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:32:28,379 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:32:28,397 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:32:28,418 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:32:28,423 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:32:28,489 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:32:28,549 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:32:28,613 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:32:28,675 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:32:28,732 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:32:28,791 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:32:28,850 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:32:29,005 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:32:29,022 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:32:29,083 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:32:29,143 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:32:29,204 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:32:29,262 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:32:29,323 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:32:29,379 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:32:29,435 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:32:29,498 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:32:29,558 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:32:29,615 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:32:29,675 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:32:29,736 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:32:29,795 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:32:29,858 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:32:29,918 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:32:29,985 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:32:30,053 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:32:30,113 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:32:30,176 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:32:30,328 log WARNING Not Found: /favicon.ico
+2019-06-29 05:32:37,141 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 32, 37, 126133), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:32:37,142 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:32:37,190 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 32, 37, 126133)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:32:37,260 query DEBUG params: (1,)
+2019-06-29 05:32:37,261 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:32:37,348 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:32:37,394 query DEBUG params: ()
+2019-06-29 05:32:37,395 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:32:37,413 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:32:37,574 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:32:37,627 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:32:37,628 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:32:37,648 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:32:37,654 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:32:37,661 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:32:37,669 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:32:37,711 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:32:37,713 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:32:37,739 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:32:37,733 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:32:37,756 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:32:37,781 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:32:37,789 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:32:37,816 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:32:37,817 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:32:37,819 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:32:37,835 log WARNING Not Found: /static/lte/plugins/jQuery/jquery-2.2.3.min.js
+2019-06-29 05:32:37,848 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:32:37,859 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:32:37,885 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:32:37,890 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:32:37,911 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:32:37,943 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:32:37,946 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:32:37,959 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:32:37,962 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:32:37,964 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:32:37,984 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:32:37,995 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:32:38,018 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:32:38,049 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:32:38,061 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:32:38,075 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:32:38,077 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:32:38,085 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:32:38,125 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:32:38,126 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:32:38,145 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:32:38,164 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:32:38,169 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:32:38,173 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:32:38,199 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:32:38,248 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:32:38,275 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:32:38,284 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:32:38,299 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:32:38,308 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:32:38,312 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:32:38,364 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:32:38,372 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:32:38,386 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:32:38,396 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:32:38,455 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:32:38,521 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:32:38,583 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:32:38,638 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:32:38,698 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:32:38,768 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:32:38,830 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:32:38,891 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:32:38,950 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:32:39,019 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:32:39,081 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:32:39,237 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:32:39,257 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:32:39,320 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:32:39,383 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:32:39,438 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:32:39,502 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:32:39,563 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:32:39,624 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:32:39,681 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:32:39,744 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:32:39,807 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:32:39,864 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:32:39,927 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:32:39,984 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:32:40,046 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:32:40,104 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:32:40,159 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:32:40,220 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:32:40,285 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:32:40,342 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:32:40,406 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:32:48,764 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:32:48,792 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:32:48,795 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:32:48,800 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:32:48,804 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:32:48,808 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:32:48,825 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:32:48,838 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:32:48,854 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:32:48,869 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:32:48,893 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:32:48,933 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:32:48,942 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:32:48,953 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:32:48,957 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:32:48,982 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:32:49,003 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:32:49,005 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:33:22,599 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 33, 22, 587797), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:33:22,600 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:33:22,638 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 33, 22, 587797)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:33:22,692 query DEBUG params: (1,)
+2019-06-29 05:33:22,692 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:33:22,760 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:33:22,793 query DEBUG params: ()
+2019-06-29 05:33:22,794 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:33:22,809 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:33:22,948 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:33:22,981 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:33:22,998 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:33:23,017 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:33:23,021 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:33:23,023 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:33:23,037 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:33:23,117 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:33:23,129 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:33:23,126 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:33:23,139 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:33:23,141 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:33:23,143 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:33:23,171 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:33:23,191 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:33:23,207 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:33:23,221 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:33:23,260 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:33:23,288 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:33:23,291 log WARNING Not Found: /static/lte/plugins/jQuery/jquery-2.2.3.min.js
+2019-06-29 05:33:23,307 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:33:23,314 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:33:23,319 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:33:23,332 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:33:23,362 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:33:23,378 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:33:23,399 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:33:23,427 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:33:23,443 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:33:23,446 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:33:23,465 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:33:23,478 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:33:23,487 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:33:23,492 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:33:23,504 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:33:23,519 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:33:23,529 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:33:23,557 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:33:23,559 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:33:23,563 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:33:23,579 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:33:23,583 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:33:23,611 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:33:23,621 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:33:23,638 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:33:23,640 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:33:23,657 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:33:23,659 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:33:23,672 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:33:23,719 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:33:23,724 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:33:23,738 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:33:23,745 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:33:23,807 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:33:23,862 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:33:23,917 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:33:23,978 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:33:24,035 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:33:24,093 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:33:24,154 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:33:24,218 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:33:24,278 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:33:24,333 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:33:24,491 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:33:24,510 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:33:24,571 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:33:24,634 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:33:24,694 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:33:24,757 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:33:24,819 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:33:24,878 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:33:24,942 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:33:25,014 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:33:25,078 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:33:25,137 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:33:25,202 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:33:25,280 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:33:25,341 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:33:25,407 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:33:25,470 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:33:25,533 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:33:25,593 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:33:25,656 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:33:25,711 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:33:25,849 log WARNING Not Found: /favicon.ico
+2019-06-29 05:33:35,840 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:33:35,844 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:33:35,849 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:33:35,854 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:33:35,866 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:33:35,899 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:33:35,942 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:33:35,950 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:33:35,957 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:33:35,963 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:33:35,971 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:33:35,975 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:33:35,999 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:33:36,026 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:33:36,028 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:33:36,057 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:33:36,097 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:33:36,113 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:33:42,074 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 33, 42, 53588), 'szvufry4epi535jo7mvlb6cnzuxe5hpt')
+2019-06-29 05:33:42,077 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:33:42,123 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 33, 42, 53588)}}, {'session_key': {'$eq': 'szvufry4epi535jo7mvlb6cnzuxe5hpt'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:33:42,192 query DEBUG params: (1,)
+2019-06-29 05:33:42,193 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:33:42,278 query DEBUG Find query: {'filter': {'id': {'$eq': 1}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:33:42,329 query DEBUG params: ()
+2019-06-29 05:33:42,330 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:33:42,343 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:33:42,496 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:33:42,527 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:33:42,574 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:33:42,581 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:33:42,619 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:33:42,620 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:33:42,610 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:33:42,649 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:33:42,677 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:33:42,689 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:33:42,696 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:33:42,747 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:33:42,755 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:33:42,758 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:33:42,785 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:33:42,798 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:33:42,849 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:33:42,870 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:33:42,879 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:33:42,898 log WARNING Not Found: /static/lte/plugins/jQuery/jquery-2.2.3.min.js
+2019-06-29 05:33:42,907 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:33:42,924 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:33:42,936 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:33:42,940 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:33:42,983 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:33:42,997 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:33:43,013 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:33:43,028 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:33:43,024 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:33:43,117 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:33:43,135 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:33:43,146 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:33:43,156 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:33:43,165 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:33:43,178 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:33:43,218 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:33:43,233 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:33:43,241 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:33:43,268 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:33:43,328 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:33:43,357 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:33:43,383 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:33:43,398 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:33:43,404 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:33:43,432 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:33:43,440 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:33:43,493 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:33:43,498 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:33:43,574 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:33:43,582 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:33:43,589 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:33:43,601 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:33:43,607 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:33:43,679 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:33:43,748 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:33:43,808 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:33:43,870 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:33:43,935 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:33:44,000 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:33:44,068 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:33:44,135 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:33:44,205 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:33:44,271 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:33:44,330 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:33:44,395 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:33:44,460 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:33:44,673 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:33:44,713 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:33:44,781 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:33:44,847 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:33:44,911 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:33:44,974 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:33:45,042 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:33:45,103 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:33:45,175 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:33:45,254 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:33:45,332 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:33:45,394 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:33:45,458 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:33:45,521 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:33:45,585 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:33:45,650 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:33:45,719 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:33:45,783 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:33:45,850 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:33:45,914 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:33:45,984 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:33:46,144 log WARNING Not Found: /favicon.ico
+2019-06-29 05:34:07,027 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 34, 7, 9756), '63la2mlp7mltaqpjy2g9tsvx8694dlvf')
+2019-06-29 05:34:07,030 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:34:07,083 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 34, 7, 9756)}}, {'session_key': {'$eq': '63la2mlp7mltaqpjy2g9tsvx8694dlvf'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:34:07,145 query DEBUG params: (2,)
+2019-06-29 05:34:07,145 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:34:07,220 query DEBUG Find query: {'filter': {'id': {'$eq': 2}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:34:07,257 query DEBUG params: ()
+2019-06-29 05:34:07,257 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:34:07,273 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:34:07,353 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:34:07,364 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:34:07,374 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:34:07,386 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:34:07,432 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:34:07,434 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:34:07,449 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:34:07,453 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:34:07,456 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:34:07,476 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:34:07,490 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:34:07,528 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:34:07,529 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:34:07,535 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:34:07,561 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:34:07,563 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:34:07,571 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:34:07,609 log WARNING Not Found: /static/lte/plugins/jQuery/jquery-2.2.3.min.js
+2019-06-29 05:34:07,611 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:34:07,636 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:34:07,655 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:34:07,660 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:34:07,629 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:34:07,682 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:34:07,689 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:34:07,704 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:34:07,722 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:34:07,738 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:34:07,749 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:34:07,775 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:34:07,798 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:34:07,800 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:34:07,821 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:34:07,824 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:34:07,841 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:34:07,845 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:34:07,862 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:34:07,874 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:34:07,886 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:34:07,903 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:34:07,907 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:34:07,924 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:34:07,935 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:34:07,945 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:34:07,947 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:34:07,974 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:34:08,038 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:34:08,043 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:34:08,049 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:34:08,054 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:34:08,057 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:34:08,060 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:34:08,095 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:34:08,152 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:34:08,212 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:34:08,269 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:34:08,331 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:34:08,385 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:34:08,446 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:34:08,507 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:34:08,565 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:34:08,618 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:34:08,677 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:34:08,734 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:34:08,791 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:34:08,878 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:34:08,938 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:34:08,997 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:34:09,048 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:34:09,105 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:34:09,162 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:34:09,220 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:34:09,273 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:34:09,332 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:34:09,386 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:34:09,442 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:34:09,499 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:34:09,553 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:34:09,613 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:34:09,669 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:34:09,725 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:34:09,784 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:34:09,851 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:34:09,915 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:34:09,973 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:34:10,035 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:35:33,265 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:35:33,277 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:35:33,296 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:35:33,334 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:35:33,337 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:35:33,344 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:35:33,369 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:35:33,388 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:35:33,397 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:35:33,401 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:35:33,416 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:35:33,433 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:35:33,444 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:35:33,461 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:35:33,490 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:35:33,497 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:35:33,504 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:35:33,518 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:35:36,103 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 35, 36, 83042), '63la2mlp7mltaqpjy2g9tsvx8694dlvf')
+2019-06-29 05:35:36,104 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:35:36,159 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 35, 36, 83042)}}, {'session_key': {'$eq': '63la2mlp7mltaqpjy2g9tsvx8694dlvf'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:35:36,235 query DEBUG params: (2,)
+2019-06-29 05:35:36,236 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:35:36,325 query DEBUG Find query: {'filter': {'id': {'$eq': 2}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:35:36,371 query DEBUG params: ()
+2019-06-29 05:35:36,371 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:35:36,391 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:35:36,497 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:35:36,526 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:35:36,548 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:35:36,587 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:35:36,604 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:35:36,620 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:35:36,627 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:35:36,637 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:35:36,666 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:35:36,704 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:35:36,710 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:35:36,732 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:35:36,735 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:35:36,753 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:35:36,759 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:35:36,770 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:35:36,804 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:35:36,847 log WARNING Not Found: /static/lte/plugins/jQuery/jquery-2.2.3.min.js
+2019-06-29 05:35:36,855 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:35:36,836 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:35:36,863 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:35:36,873 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:35:36,919 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:35:36,937 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:35:36,963 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:35:36,983 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:35:36,986 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:35:37,029 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:35:37,062 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:35:37,066 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:35:37,093 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:35:37,105 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:35:37,120 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:35:37,138 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:35:37,183 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:35:37,205 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:35:37,195 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:35:37,233 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:35:37,248 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:35:37,284 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:35:37,306 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:35:37,330 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:35:37,337 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:35:37,393 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:35:37,419 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:35:37,424 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:35:37,452 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:35:37,494 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:35:37,504 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:35:37,508 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:35:37,526 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:35:37,532 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:35:37,556 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:35:37,621 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:35:37,680 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:35:37,738 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:35:37,805 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:35:37,879 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:35:37,942 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:35:38,005 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:35:38,068 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:35:38,143 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:35:38,203 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:35:38,269 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:35:38,333 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:35:38,401 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:35:38,486 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:35:38,550 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:35:38,615 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:35:38,673 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:35:38,735 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:35:38,796 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:35:38,860 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:35:38,923 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:35:38,990 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:35:39,058 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:35:39,125 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:35:39,195 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:35:39,257 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:35:39,324 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:35:39,398 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:35:39,475 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:35:39,539 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:35:39,597 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:35:39,660 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:35:39,722 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:35:39,784 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:36:14,430 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 36, 14, 416055), '63la2mlp7mltaqpjy2g9tsvx8694dlvf')
+2019-06-29 05:36:14,432 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:36:14,474 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 36, 14, 416055)}}, {'session_key': {'$eq': '63la2mlp7mltaqpjy2g9tsvx8694dlvf'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:36:14,540 query DEBUG params: (2,)
+2019-06-29 05:36:14,541 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:36:14,623 query DEBUG Find query: {'filter': {'id': {'$eq': 2}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:36:14,661 query DEBUG params: ()
+2019-06-29 05:36:14,662 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:36:14,678 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:36:14,798 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:36:14,811 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:36:14,823 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:36:14,826 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:36:14,845 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:36:14,874 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:36:14,884 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:36:14,891 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:36:14,903 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:36:14,911 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:36:14,925 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:36:14,928 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:36:14,961 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:36:14,964 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:36:14,975 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:36:14,979 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:36:14,996 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:36:15,003 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:36:15,029 log WARNING Not Found: /static/lte/plugins/jQuery/jquery-2.2.3.min.js
+2019-06-29 05:36:15,054 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:36:15,064 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:36:15,080 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:36:15,097 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:36:15,110 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:36:15,112 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:36:15,128 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:36:15,189 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:36:15,191 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:36:15,200 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:36:15,203 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:36:15,213 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:36:15,219 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:36:15,260 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:36:15,282 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:36:15,284 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:36:15,290 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:36:15,265 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:36:15,313 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:36:15,331 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:36:15,371 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:36:15,380 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:36:15,390 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:36:15,417 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:36:15,422 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:36:15,428 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:36:15,450 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:36:15,464 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:36:15,468 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:36:15,479 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:36:15,498 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:36:15,510 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:36:15,520 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:36:15,529 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:36:15,591 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:36:15,649 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:36:15,708 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:36:15,770 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:36:15,834 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:36:15,896 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:36:15,954 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:36:16,014 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:36:16,073 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:36:16,133 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:36:16,213 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:36:16,274 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:36:16,334 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:36:16,391 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:36:16,448 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:36:16,504 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:36:16,567 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:36:16,627 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:36:16,688 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:36:16,743 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:36:16,800 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:36:16,855 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:36:16,912 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:36:16,973 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:36:17,037 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:36:17,094 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:36:17,153 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:36:17,214 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:36:17,275 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:36:17,334 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:36:17,396 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:36:19,473 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 36, 19, 456546), '63la2mlp7mltaqpjy2g9tsvx8694dlvf')
+2019-06-29 05:36:19,475 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:36:19,515 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 36, 19, 456546)}}, {'session_key': {'$eq': '63la2mlp7mltaqpjy2g9tsvx8694dlvf'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:36:19,579 query DEBUG params: (2,)
+2019-06-29 05:36:19,580 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:36:19,656 query DEBUG Find query: {'filter': {'id': {'$eq': 2}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:36:19,705 query DEBUG params: ()
+2019-06-29 05:36:19,706 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:36:19,721 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:36:19,797 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:36:19,812 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:36:19,828 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:36:19,835 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:36:19,840 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:36:19,842 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:36:19,864 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:36:19,879 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:36:19,911 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:36:19,913 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:36:19,919 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:36:19,941 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:36:19,947 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:36:19,958 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:36:19,995 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:36:20,008 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:36:20,012 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:36:20,028 log WARNING Not Found: /static/lte/plugins/jQuery/jquery-2.2.3.min.js
+2019-06-29 05:36:20,032 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:36:20,057 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:36:20,072 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:36:20,076 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:36:20,104 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:36:20,107 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:36:20,113 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:36:20,140 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:36:20,144 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:36:20,149 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:36:20,174 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:36:20,191 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:36:20,206 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:36:20,208 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:36:20,225 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:36:20,235 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:36:20,242 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:36:20,274 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:36:20,308 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:36:20,327 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:36:20,357 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:36:20,359 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:36:20,363 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:36:20,349 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:36:20,372 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:36:20,386 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:36:20,413 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:36:20,434 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:36:20,471 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:36:20,479 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:36:20,491 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:36:20,497 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:36:20,506 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:36:20,509 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:36:20,530 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:36:20,594 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:36:20,653 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:36:20,710 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:36:20,766 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:36:20,826 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:36:20,886 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:36:20,943 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:36:21,002 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:36:21,077 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:36:21,136 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:36:21,199 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:36:21,256 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:36:21,320 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:36:21,379 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:36:21,439 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:36:21,495 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:36:21,553 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:36:21,613 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:36:21,671 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:36:21,732 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:36:21,796 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:36:21,854 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:36:21,910 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:36:21,974 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:36:22,033 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:36:22,091 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:36:22,147 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:36:22,209 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:36:22,269 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:36:49,446 query DEBUG params: ()
+2019-06-29 05:36:49,447 query DEBUG 
+ sql_command: SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"
+2019-06-29 05:36:49,451 query DEBUG Find query: {'projection': ['app', 'name']}
+2019-06-29 05:36:51,426 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 36, 51, 418044), '63la2mlp7mltaqpjy2g9tsvx8694dlvf')
+2019-06-29 05:36:51,427 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:36:51,437 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 36, 51, 418044)}}, {'session_key': {'$eq': '63la2mlp7mltaqpjy2g9tsvx8694dlvf'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:36:51,632 query DEBUG params: (2,)
+2019-06-29 05:36:51,633 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:36:51,652 query DEBUG Find query: {'filter': {'id': {'$eq': 2}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:36:51,697 query DEBUG params: ()
+2019-06-29 05:36:51,698 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:36:51,705 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:36:51,787 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:36:51,791 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:36:51,793 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:36:51,802 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:36:51,802 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:36:51,809 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:36:51,839 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:36:51,843 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:36:51,834 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:36:51,851 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:36:51,854 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:36:51,859 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:36:51,894 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:36:51,909 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:36:51,916 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:36:51,921 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:36:51,927 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:36:51,931 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:36:51,949 log WARNING Not Found: /static/lte/plugins/jQuery/jquery-2.2.3.min.js
+2019-06-29 05:36:51,957 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:36:51,973 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:36:51,980 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:36:51,990 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:36:51,994 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:36:52,004 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:36:52,012 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:36:52,019 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:36:52,027 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:36:52,048 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:36:52,052 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:36:52,057 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:36:52,060 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:36:52,071 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:36:52,076 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:36:52,103 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:36:52,117 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:36:52,121 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:36:52,127 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:36:52,131 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:36:52,136 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:36:52,156 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:36:52,168 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:36:52,172 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:36:52,180 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:36:52,190 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:36:52,194 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:36:52,206 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:36:52,222 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:36:52,226 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:36:52,229 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:36:52,250 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:36:52,254 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:36:52,265 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:36:52,318 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:36:52,373 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:36:52,431 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:36:52,487 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:36:52,539 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:36:52,598 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:36:52,669 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:36:52,724 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:36:52,778 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:36:52,835 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:36:52,894 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:36:52,946 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:36:53,004 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:36:53,060 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:36:53,114 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:36:53,169 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:36:53,216 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:36:53,269 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:36:53,323 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:36:53,378 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:36:53,434 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:36:53,486 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:36:53,539 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:36:53,595 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:36:53,647 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:36:53,699 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:36:53,751 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:37:17,032 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:37:17,028 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:37:17,036 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:37:17,042 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:37:17,052 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:37:17,056 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:37:17,075 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:37:17,100 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:37:17,102 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:37:17,104 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:37:17,105 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:37:17,108 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:37:17,132 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:37:17,151 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:37:17,155 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:37:17,164 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:37:17,168 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:37:17,172 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:37:18,932 query DEBUG params: (datetime.datetime(2019, 6, 29, 5, 37, 18, 926477), '63la2mlp7mltaqpjy2g9tsvx8694dlvf')
+2019-06-29 05:37:18,932 query DEBUG 
+ sql_command: SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %(0)s AND "django_session"."session_key" = %(1)s)
+2019-06-29 05:37:18,947 query DEBUG Find query: {'filter': {'$and': [{'expire_date': {'$gt': datetime.datetime(2019, 6, 29, 5, 37, 18, 926477)}}, {'session_key': {'$eq': '63la2mlp7mltaqpjy2g9tsvx8694dlvf'}}]}, 'projection': ['session_key', 'session_data', 'expire_date']}
+2019-06-29 05:37:19,001 query DEBUG params: (2,)
+2019-06-29 05:37:19,002 query DEBUG 
+ sql_command: SELECT "front_user"."id", "front_user"."password", "front_user"."last_login", "front_user"."is_superuser", "front_user"."username", "front_user"."first_name", "front_user"."last_name", "front_user"."email", "front_user"."is_staff", "front_user"."is_active", "front_user"."date_joined", "front_user"."permission" FROM "front_user" WHERE "front_user"."id" = %(0)s
+2019-06-29 05:37:19,029 query DEBUG Find query: {'filter': {'id': {'$eq': 2}}, 'projection': ['id', 'password', 'last_login', 'is_superuser', 'username', 'first_name', 'last_name', 'email', 'is_staff', 'is_active', 'date_joined', 'permission']}
+2019-06-29 05:37:19,050 query DEBUG params: ()
+2019-06-29 05:37:19,050 query DEBUG 
+ sql_command: SELECT DISTINCT "front_caritem"."car_brand" FROM "front_caritem"
+2019-06-29 05:37:19,057 query DEBUG Aggregation query: [{'$group': {'_id': {'car_brand': '$car_brand'}}}, {'$replaceRoot': {'newRoot': '$_id'}}]
+2019-06-29 05:37:19,110 log WARNING Not Found: /static/ionicons/2.0.1/css/ionicons.min.css
+2019-06-29 05:37:19,111 log WARNING Not Found: /static/lte/bootstrap/css/bootstrap.min.css
+2019-06-29 05:37:19,116 log WARNING Not Found: /static/lte/plugins/iCheck/flat/blue.css
+2019-06-29 05:37:19,127 log WARNING Not Found: /static/lte/dist/css/AdminLTE.min.css
+2019-06-29 05:37:19,122 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:37:19,131 log WARNING Not Found: /static/lte/dist/css/skins/_all-skins.min.css
+2019-06-29 05:37:19,182 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.css
+2019-06-29 05:37:19,183 log WARNING Not Found: /static/lte/plugins/select2/select2.min.css
+2019-06-29 05:37:19,188 log WARNING Not Found: /static/lte/plugins/select2/select2-bootstrap.css
+2019-06-29 05:37:19,193 log WARNING Not Found: /static/lte/plugins/datepicker/datepicker3.css
+2019-06-29 05:37:19,198 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.css
+2019-06-29 05:37:19,202 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.css
+2019-06-29 05:37:19,253 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/css/buttons.dataTables.min.css
+2019-06-29 05:37:19,260 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.css
+2019-06-29 05:37:19,266 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
+2019-06-29 05:37:19,276 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:37:19,281 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.css
+2019-06-29 05:37:19,272 log WARNING Not Found: /static/plugins/tooltipster/dist/css/tooltipster.bundle.min.css
+2019-06-29 05:37:19,302 log WARNING Not Found: /static/lte/plugins/jQuery/jquery-2.2.3.min.js
+2019-06-29 05:37:19,310 log WARNING Not Found: /static/js/my-config.js
+2019-06-29 05:37:19,320 log WARNING Not Found: /static/js/my-utils.js
+2019-06-29 05:37:19,331 log WARNING Not Found: /static/js/my-factory.js
+2019-06-29 05:37:19,335 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:37:19,339 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:37:19,352 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:37:19,360 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:37:19,373 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:37:19,395 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:37:19,400 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:37:19,413 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:37:19,411 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:37:19,419 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:37:19,424 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:37:19,459 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:37:19,468 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:37:19,487 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:37:19,497 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:37:19,501 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:37:19,508 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:37:19,514 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:37:19,520 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:37:19,541 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:37:19,552 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:37:19,561 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:37:19,575 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:37:19,579 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:37:19,584 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:37:19,594 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:37:19,603 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:37:19,611 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:37:19,632 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:37:19,637 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:37:19,644 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:37:19,707 log WARNING Not Found: /static/plugins/pagination/jquery.twbsPagination.min.js
+2019-06-29 05:37:19,762 log WARNING Not Found: /static/plugins/ckeditor/ckeditor.js
+2019-06-29 05:37:19,818 log WARNING Not Found: /static/plugins/ckeditor/config.js
+2019-06-29 05:37:19,875 log WARNING Not Found: /static/plugins/tooltipster/dist/js/tooltipster.bundle.min.js
+2019-06-29 05:37:19,930 log WARNING Not Found: /static/ui/1.11.4/jquery-ui.min.js
+2019-06-29 05:37:19,985 log WARNING Not Found: /static/lte/plugins/select2/select2.full.min.js
+2019-06-29 05:37:20,042 log WARNING Not Found: /static/plugins/dropzone/dist/dropzone.js
+2019-06-29 05:37:20,098 log WARNING Not Found: /static/plugins/clipboard/dist/clipboard.min.js
+2019-06-29 05:37:20,151 log WARNING Not Found: /static/plugins/bucket/js/jquery.isotope.js
+2019-06-29 05:37:20,209 log WARNING Not Found: /static/css/my-style.css
+2019-06-29 05:37:20,296 log WARNING Not Found: /static/lte/bootstrap/js/bootstrap.min.js
+2019-06-29 05:37:20,353 log WARNING Not Found: /static/lte/plugins/datatables/jquery.dataTables.min.js
+2019-06-29 05:37:20,405 log WARNING Not Found: /static/lte/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js
+2019-06-29 05:37:20,463 log WARNING Not Found: /static/lte/plugins/datatables/dataTables.bootstrap.min.js
+2019-06-29 05:37:20,518 log WARNING Not Found: /static/lte/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js
+2019-06-29 05:37:20,575 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.html5.min.js
+2019-06-29 05:37:20,629 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/buttons.print.min.js
+2019-06-29 05:37:20,682 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/dataTables.buttons.min.js
+2019-06-29 05:37:20,745 log WARNING Not Found: /static/lte/plugins/datatables/extensions/export/js/jszip.min.js
+2019-06-29 05:37:20,802 log WARNING Not Found: /static/lte/plugins/sparkline/jquery.sparkline.min.js
+2019-06-29 05:37:20,859 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js
+2019-06-29 05:37:20,914 log WARNING Not Found: /static/lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js
+2019-06-29 05:37:20,969 log WARNING Not Found: /static/moment.js/2.11.2/moment.min.js
+2019-06-29 05:37:21,029 log WARNING Not Found: /static/lte/plugins/daterangepicker/daterangepicker.js
+2019-06-29 05:37:21,086 log WARNING Not Found: /static/lte/plugins/datepicker/bootstrap-datepicker.js
+2019-06-29 05:37:21,141 log WARNING Not Found: /static/lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js
+2019-06-29 05:37:21,199 log WARNING Not Found: /static/lte/plugins/slimScroll/jquery.slimscroll.min.js
+2019-06-29 05:37:21,253 log WARNING Not Found: /static/lte/plugins/fastclick/fastclick.js
+2019-06-29 05:37:21,316 log WARNING Not Found: /static/lte/plugins/colorpicker/bootstrap-colorpicker.min.js
+2019-06-29 05:37:21,375 log WARNING Not Found: /static/lte/dist/js/app.min.js
+2019-06-29 05:37:21,431 log WARNING Not Found: /static/plugins/accounting.js
+2019-06-29 05:37:47,977 log WARNING Not Found: //static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:37:53,790 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:37:57,666 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css
+2019-06-29 05:40:00,604 query DEBUG params: ()
+2019-06-29 05:40:00,605 query DEBUG 
+ sql_command: SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"
+2019-06-29 05:40:00,608 query DEBUG Find query: {'projection': ['app', 'name']}
+2019-06-29 05:40:20,745 query DEBUG params: ()
+2019-06-29 05:40:20,746 query DEBUG 
+ sql_command: SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"
+2019-06-29 05:40:20,751 query DEBUG Find query: {'projection': ['app', 'name']}
+2019-06-29 05:40:35,097 log WARNING Not Found: /static/font-awesome/4.5.0/css/font-awesome.min.css

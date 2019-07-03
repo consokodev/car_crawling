@@ -1,0 +1,215 @@
+.retention-box{
+    position:relative;
+    border-radius:3px;
+    background:#ffffff;
+    /*border-top:3px solid #d2d6de;*/
+    margin-bottom:20px;
+    width:100%;
+    box-shadow:0 1px 1px rgba(0,0,0,0.1)
+}
+
+.retention-box-body{
+    max-height:500px;
+    overflow:auto;
+}
+
+.retention-box-body:before,.retention-box-footer:before,.retention-box-header:after,.retention-box-body:after,.retention-box-footer:after{
+    content:" ";display:table
+}
+.retention-box-header:after,.retention-box-body:after,.retention-box-footer:after{
+    clear:both
+}
+.retention-box-header{
+    color:#444;display:block;padding:10px 0px;position:relative
+}
+.retention-box-header.with-border{
+    border-bottom:1px solid #f4f4f4
+}
+.collapsed-box .retention-box-header.with-border{
+    border-bottom:none
+}
+.retention-box-header>.fa,.retention-box-header>.glyphicon,.retention-box-header>.ion,.retention-box-header .retention-box-title{
+    display:inline-block;font-size:18px;margin:0;line-height:1
+}
+.retention-box-header>.fa,.retention-box-header>.glyphicon,.retention-box-header>.ion{
+    margin-right:5px
+}
+.retention-box-header>.retention-box-tools{
+    position:absolute;right:0px;top:5px
+}
+.retention-box-header>.retention-box-tools [data-toggle="tooltip"]{
+    position:relative
+}
+.retention-box-header>.retention-box-tools.pull-right .dropdown-menu{
+    right:0;left:auto
+}
+.btn-box-tool{
+    padding:5px;font-size:12px;background:transparent;color:#97a0b3
+}
+.open .btn-box-tool,.btn-box-tool:hover{
+    color:#606c84
+}
+.btn-box-tool.btn:active{
+    box-shadow:none
+}
+.retention-box-body{
+    border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:3px;border-bottom-left-radius:3px;/* padding:10px */
+}
+.no-header .retention-box-body{
+    border-top-right-radius:3px;border-top-left-radius:3px
+}
+.retention-box-body>.table{
+    margin-bottom:0
+}
+.retention-box-body .fc{
+    margin-top:5px
+}
+.retention-box-body .full-width-chart{
+    margin:-19px
+}
+.retention-box-body.no-padding .full-width-chart{
+    margin:-9px
+}
+.retention-box-body .retention-box-pane{
+    border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:3px
+}
+.retention-box-body .retention-box-pane-right{
+    border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:3px;border-bottom-left-radius:0
+}
+.retention-box-tools{
+    position:absolute;right:0px;top:5px
+}
+.retention-box-header>.retention-box-tools [data-toggle="tooltip"]{
+    position:relative
+}
+.retention-box-header>.retention-box-tools.pull-right .dropdown-menu{
+    right:0;left:auto
+}
+.btn-box-tool{
+    padding:5px;font-size:12px;background:transparent;color:#97a0b3
+}
+.retention-box-title{
+    display:inline-block;font-size:18px;margin:0;line-height:1
+}
+.retention-box-header>.fa,.retention-box-header>.glyphicon,.retention-box-header>.ion{
+    margin-right:5px
+}
+
+/*three way mode switch*/
+.switch-field {
+    font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.switch-field input {
+    display: none;
+}
+
+.switch-field label {
+    float: left;
+    margin-bottom: 0px !important;
+}
+
+.switch-field label {
+    display: inline-block;
+    width: 80px;
+    background-color: #e4e4e4;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: none;
+    padding: 6px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition:    all 0.1s ease-in-out;
+    -ms-transition:     all 0.1s ease-in-out;
+    -o-transition:      all 0.1s ease-in-out;
+    transition:         all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+    cursor: pointer;
+}
+
+.switch-field input:checked + label {
+    background-color: #23527c;
+    color : #FFFFFF;
+    font-weight : 700;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+
+.retention-thead, .retention-date{
+    background-color: #cfcfcf;
+    font-weight: 700;
+}
+
+.clickable, .head-clickable{
+    cursor: pointer;
+}
+
+.hover {
+    opacity : 0.6;
+    /*border-left: mediumslateblue solid 1px !important;
+    border-right: mediumslateblue solid 1px !important;*/
+    color: black;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(circle, lightskyblue, lightcyan, steelblue); /* Safari */
+    background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+    background: radial-gradient(circle, lightskyblue, lightcyan, steelblue); /* Standard syntax */
+}
+a:hover{
+    text-decoration: none !important;
+}
+#retention-active-switch{
+    vertical-align: inherit !important;
+}
+
+.retention-toggle-values{
+    margin-left: 5px;
+    vertical-align: inherit !important;
+}
+
+.retention-download-button{
+    margin-left: 15px;
+    vertical-align: inherit !important;
+}
+
+.retention-badge{
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+.badge-info { background-color: #3a87ad!important }
+
+/*override datatable*/
+table.table-bordered td:last-child{
+	border-right-width: 1px;
+}
+
+table.table-bordered > tbody > tr > td {
+
+	border-collapse: inherit;
+}

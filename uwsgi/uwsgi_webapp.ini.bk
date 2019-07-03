@@ -1,0 +1,44 @@
+[uwsgi]
+# name of prject
+project_name = PROJECT_NAME
+project_dir = PROJECT_DIR
+app_name = APP_NAME
+template_dir = TEMPLATE_DIR
+
+# tcp port to bind
+http = 0.0.0.0:8000
+
+#change to project folder
+chdir = %(project_dir)
+
+# python module with Polemarch (should be in Python classpath)
+#module = %(program_name).wsgi:application
+wsgi-file = %(program_name)/wsgi.py
+
+# number of workers
+processes = 2
+
+# number of threads per worker
+threads = 2
+
+# master process, which overwatch for workers and restart them if needed
+master = true
+
+# allow using Python-threads in code of application
+enable-threads = true
+
+# path to static content
+#static-map = /static=%(program_name)/static
+static-map = /static=%(project_dir)/%(app_name)/%(template_dir)
+
+# PID-file for service
+pidfile = %(project_dir)/run/uwsgi_web.pid
+
+
+# respawn processes after serving 500 requests
+max-requests = 500
+
+#touch-reload = %(project_dir)/reload.ini
+
+daemon = true
+daemonize = %(project_dir)/logs/uwsgi.log

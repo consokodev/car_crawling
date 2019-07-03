@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta property="og:site_name" content="Araja Jyothi Babu">
+	<meta property="og:title" content="Retention Graph (Cohort Analysis)">
+	<meta property="og:description" content="Cohort Analysis Visualizer with Retention data with simple table">
+	<meta property="og:image" content="http://i.imgur.com/uJQTG1Q.png">
+    <title>Retention Graph</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/retention-graph.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+</head>
+<body>
+
+<h1 align="center">Retention Graph (Cohort Analysis)</h1>
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div id="demo">
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.js" type="text/javascript"></script>
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<script src="js/options.js" type="text/javascript"></script>
+<script src="js/retention-graph.js" type="text/javascript"></script>
+<script>
+    $("#demo").retention(options);
+</script>
+</html>

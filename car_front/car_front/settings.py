@@ -15,7 +15,7 @@ import logging
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SUF_TEMPLATE_DIR = "front/templates"
+SUF_TEMPLATE_DIR = "front/templates_v2"
 TEMPLATE_DIR = os.path.join(BASE_DIR, SUF_TEMPLATE_DIR)
 
 

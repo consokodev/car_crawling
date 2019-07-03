@@ -2,3 +2,4 @@
 .idea/*
 env/*
 .gitignore
+car_front/logs/

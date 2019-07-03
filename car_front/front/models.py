@@ -33,4 +33,29 @@ class User(AbstractUser):
         return self.username
 
     def checkAdmin(self):
-        return True if self.permission["admin"] else False
+        try:
+            return True if self.permission["admin"] else False
+        except:
+            return False
+    def checkUser(self):
+        try:
+            return next((True for key, value in self.permission["user"].items() if value), False)
+        except:
+            False
+    def get_features(self):
+        features = [
+            {
+                "name": "Car",
+                "url": ""
+            },
+        ]
+        if(self.permission["admin"]):
+            features.append({
+                "name": "Admin",
+                "url": "admin-settings",
+            })
+            return features
+        elif(next((True for key, value in self.permission["user"].items() if value), False)):
+            return features
+        else:
+            return None

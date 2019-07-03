@@ -1,6 +1,5 @@
 import datetime,time
 
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render_to_response
 from django.views.generic import ListView
 from rest_framework.views import APIView
@@ -11,7 +10,7 @@ from .exceptions import ServerError
 from .serializers import carItemSerializer
 from . import response_status
 
-from .models import carItem
+from .models import carItem, User
 from .utils.update_scrapy import *
 import logging
 
@@ -20,7 +19,7 @@ logger = logging.getLogger(__name__)
 class ListCar(ListView):
 
     '''
-        Render mainpage home.html
+        Render home.html
     '''
 
     model = carItem
@@ -28,14 +27,14 @@ class ListCar(ListView):
     context_object_name = 'caritem_list'
     ordering = '-publish_time'
 
-    # def get(self, request, *args, **kwargs):
-    #     if(request.user.is_authenticated):
-    #         if(request.user.checkAdmin()):
-    #             return super().get(request, *args, **kwargs)
-    #         else:
-    #             return render_to_response("invalid.html")
-    #     else:
-    #         return render_to_response("login.html")
+    def get(self, request, *args, **kwargs):
+        if(request.user.is_authenticated):
+            if(request.user.checkAdmin() or request.user.checkUser()):
+                return super().get(request, *args, **kwargs)
+            else:
+                return render_to_response("invalid.html")
+        else:
+            return render_to_response("login.html")
 
     '''
         Add car_brand to user's response
@@ -45,7 +44,8 @@ class ListCar(ListView):
         context['data'] = {
             # 'fromDate':datetime.datetime.now().strftime("%d-%m-%Y"),
             # 'toDate': datetime.datetime.now().strftime("%d-%m-%Y"),
-            'car_brand': carItem.objects.values('car_brand').distinct()
+            'car_brand': carItem.objects.values('car_brand').distinct(),
+            'left_menu': self.request.user.get_features(),
         }
         return context
 
@@ -80,8 +80,8 @@ class ListCarj(APIView):
     def post(self, request):
         if(request.data['fromDate'] and request.data['toDate'] and request.data['car_brand'] != ''):
             try:
-                cars = carItem.objects.filter(publish_time__gte=time.mktime(datetime.datetime.strptime(request.data['fromDate'], "%d-%m-%Y").timetuple()),
-                                                   publish_time__lte=time.mktime(datetime.datetime.strptime(request.data['toDate'], "%d-%m-%Y").timetuple()), car_brand=request.data['car_brand'])
+                cars = carItem.objects.filter(publish_time__gte=time.mktime(datetime.datetime.strptime(request.data['fromDate'], "%m/%d/%Y").timetuple()),
+                                                   publish_time__lte=time.mktime(datetime.datetime.strptime(request.data['toDate'], "%m/%d/%Y").timetuple()), car_brand=request.data['car_brand'])
             except Exception as e:
                 raise ServerError(e.message)
         elif (request.data['car_brand'] != '' and request.data['fromDate'] == '' and request.data['toDate'] == ''):
@@ -91,8 +91,8 @@ class ListCarj(APIView):
                 raise ServerError(e.message)
         elif (request.data['car_brand'] == '') and (request.data['fromDate'] != '' and request.data['toDate'] != ''):
             try:
-                cars = carItem.objects.filter(publish_time__gte=time.mktime(datetime.datetime.strptime(request.data['fromDate'], "%d-%m-%Y").timetuple()),
-                                                   publish_time__lte=time.mktime(datetime.datetime.strptime(request.data['toDate'], "%d-%m-%Y").timetuple()))
+                cars = carItem.objects.filter(publish_time__gte=time.mktime(datetime.datetime.strptime(request.data['fromDate'], "%m/%d/%Y").timetuple()),
+                                                   publish_time__lte=time.mktime(datetime.datetime.strptime(request.data['toDate'], "%m/%d/%Y").timetuple()))
             except Exception as e:
                 raise ServerError(e.message)
         else:
