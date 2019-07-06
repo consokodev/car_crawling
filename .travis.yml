@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t consoko/crawling_web -f Dockerfile .
+
+script:
+  - docker run consoko/crawling_web
