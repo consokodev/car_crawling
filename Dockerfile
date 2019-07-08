@@ -6,5 +6,5 @@ WORKDIR $WDIR
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 WORKDIR $WDIR/car_front
-CMD ["/bin/sh"]
-#ENTRYPOINT python manage.py makemigrations && python manage.py migrate && /bin/sh ../uwsgi/start_web_app.sh && /usr/bin/tail -f /dev/null
+#CMD ["/bin/sh"]
+ENTRYPOINT python manage.py makemigrations && python manage.py migrate && /bin/sh ../uwsgi/start_web_app.sh && /usr/bin/tail -f /dev/null

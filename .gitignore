@@ -1,5 +1,5 @@
-.git/*
-.idea/*
-env/*
-.gitignore
+.git/
+.idea/
+env/
 car_front/logs/
+Dockerrun.aws.json
