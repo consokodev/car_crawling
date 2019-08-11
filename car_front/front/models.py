@@ -32,6 +32,12 @@ class User(AbstractUser):
     def __str__(self):
         return self.username
 
+    def save(self, *args, **kwargs):
+        if self.permission is None:
+            self.permission = { "admin": 0, "user": {}}
+        super().save(*args, **kwargs)
+
+
     def checkAdmin(self):
         try:
             return True if self.permission["admin"] else False

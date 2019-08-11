@@ -1,26 +1,22 @@
 sudo: required
 services:
   - docker
-
-###Build new image and push to Dockerhub
+env:
+  global:
+    - SHA=$(git rev-parse HEAD)
+    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 before_install:
-  - docker build -t consoko/crawling_web -f Dockerfile .
+  - openssl aes-256-cbc -K $encrypted_0c35eebf403c_key -iv $encrypted_0c35eebf403c_iv -in service-account.json.enc -out service-account.json -d
+  - curl https://sdk.cloud.google.com | bash > /dev/null;
+  - source $HOME/google-cloud-sdk/path.bash.inc
+  - gcloud components update kubectl
+  - gcloud auth activate-service-account --key-file service-account.json
+  - gcloud config set project omgt-275
+  - gcloud config set compute/zone asia-southeast1-b
+  - gcloud container clusters get-credentials hello-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push consoko/crawling_web
-
-###Test Dev build
-#script:
-#  - docker run consoko/crawling_web
-
 deploy:
-  provider: elasticbeanstalk
-  region: "ap-southeast-1"
-  app: "cl-test"
-  env: "ClTest-env"
-  bucket_name: "elasticbeanstalk-ap-southeast-1-123907988117"
-  bucket_path: "cl-test"
+  provider: script
+  script: bash ./deploy.sh
   on:
     branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"

@@ -18,6 +18,7 @@ class BonbanhSpider(scrapy.Spider):
                   # 'https://bonbanh.com/oto/chevrolet-cruze-tu-nam-2011-den-nam-2017',
                   'https://bonbanh.com/oto/mitsubishi-xpander-cu-da-qua-su-dung',
                   'https://bonbanh.com/oto/ford-focus-tu-nam-2017-cu-da-qua-su-dung',
+                  'https://bonbanh.com/oto/hyundai-accent-tu-nam-2017-cu-da-qua-su-dung',
                   ]
 
     def parse(self, response):

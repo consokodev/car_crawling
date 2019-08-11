@@ -23,8 +23,8 @@ services:
       dockerfile: Dockerfile
       context: .
     image: car_crawling:latest
-    volumes:
-      - .:/opt/
+    # volumes:
+    #   - .:/opt/
     ports:
       - "8000:8000"
     environment:
@@ -42,8 +42,6 @@ services:
   nginx:
     restart: always
     build: ./nginx/
-    volumes:
-      - .:/opt/
     ports:
       - "80:80"
     depends_on:

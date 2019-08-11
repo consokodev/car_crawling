@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongoexpress-deployment
+spec:
+  selector:
+    matchLabels:
+      component: mongoexpress
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        component: mongoexpress
+    spec:
+      containers:
+        - name: mongoexpress
+          image: mongo-express
+          ports:
+            - containerPort: 8081
+          env:
+            - name: ME_CONFIG_MONGODB_ADMINUSERNAME
+              value: root
+            - name: ME_CONFIG_MONGODB_ADMINPASSWORD
+              value: example
+            - name: ME_CONFIG_MONGODB_SERVER
+              value: mongodb-clusterip

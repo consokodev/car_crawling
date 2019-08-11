@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+spec:
+  selector:
+    matchLabels:
+      component: web
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        component: web
+    spec:
+      containers:
+        - name: web
+          image: consoko/crawling_web
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DB_HOST
+              value: mongodb-clusterip
+            - name: DB_PORT
+              value: '27017'
+            - name: DB_USER
+              value: root
+            - name: DB_PASS
+              value: example
+            - name: DB_NAME
+              value: CarCrawling
+            - name: PROJECT_NAME
+              value: car_front
+            - name: PROJECT_DIR
+              value: /opt/car_front
+            - name: APP_NAME
+              value: front
+            - name: TEMPLATE_DIR
+              value: templates_v2

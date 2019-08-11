@@ -15,6 +15,7 @@ class ChototSpider(scrapy.Spider):
                   'https://gateway.chotot.com/v1/public/ad-listing?region_v2=13000&cg=2010&w=1&carbrand=18&carmodel=992&limit=20&st=s,k&condition_ad=1',
                   # 'https://gateway.chotot.com/v1/public/ad-listing?region_v2=13000&cg=2010&w=1&carbrand=1&carmodel=4&limit=20&st=s,k&condition_ad=1&mfdate=2013-2019',
                   'https://gateway.chotot.com/v1/public/ad-listing?region_v2=13000&cg=2010&w=1&carbrand=3&carmodel=133&limit=20&st=s,k&condition_ad=1&mfdate=2017-2019',
+                  'https://gateway.chotot.com/v1/public/ad-listing?region_v2=13000&cg=2010&w=1&carbrand=5&carmodel=187&limit=20&st=s,k&condition_ad=1&mfdate=2017-2019',
                   ]
 
     def parse(self, response):
