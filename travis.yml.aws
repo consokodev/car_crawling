@@ -1,0 +1,26 @@
+sudo: required
+services:
+  - docker
+
+###Build new image and push to Dockerhub
+before_install:
+  - docker build -t consoko/crawling_web -f Dockerfile .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push consoko/crawling_web
+
+###Test Dev build
+#script:
+#  - docker run consoko/crawling_web
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-southeast-1"
+  app: "cl-test"
+  env: "ClTest-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-123907988117"
+  bucket_path: "cl-test"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
