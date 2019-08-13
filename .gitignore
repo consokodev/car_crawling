@@ -1,5 +1,4 @@
 .git/
 .idea/
 env/
-car_front/logs/
 Dockerrun.aws.json
