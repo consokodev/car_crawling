@@ -1,13 +1,8 @@
-class Test:
-    def testReMe(self):
-        print(f'Class {self}')
-    @classmethod
-    def testClsMe(cls):
-        print(f'Class {cls}')
-    @staticmethod
-    def testStaMe():
-        print(f'Class')
-abc = Test()
-abc.testReMe()
-abc.testClsMe()
-abc.testStaMe()
+def dis_patch(operator,x,y):
+    return {
+        "add": lambda: x + y,
+        "minus": lambda: x - y,
+    }.get(operator, lambda: None)
+
+print(dis_patch("add", 1 , 2)())
+print(dis_patch("no", 2 ,3)())
