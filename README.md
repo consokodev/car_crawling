@@ -1,6 +1,7 @@
+# Features
 Crawl used car information from famous Vietnam car sites and show on tool.
 
-# Services
+# Technology
 Scarpy, Django-restframework, Mongodb, Boostrap, Javascript.
 
 # Clone project and run
